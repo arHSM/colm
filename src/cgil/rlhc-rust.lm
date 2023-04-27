@@ -462,7 +462,7 @@ namespace rust_gen
 		case [Export: export_stmt]
 		{
 			send Parser
-				"#define [Export.ident] [number(Export.number)] 
+				"pub static [Export.ident]: [Export.type] = [number(Export.number)];
 		}
 		case ['fallthrough' ';']
 		{
